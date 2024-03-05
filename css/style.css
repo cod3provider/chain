@@ -348,6 +348,28 @@ button {
 
 /* Privacy */
 
+.privacy-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .privacy-container::after {
+        content: url("../images/privacy-bg.jpg");
+        position: absolute;
+
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
 .privacy-title {
     @media (min-width: 992px) {
         text-align: start;
@@ -361,8 +383,8 @@ button {
 }
 
 .privacy-list-wrapper {
-    @media (min-width: 992px) {
-        width: 50%;
+    @media (min-width: 1200px) {
+        width: calc(50% - 30px);
     }
 }
 
@@ -376,6 +398,7 @@ button {
     padding: 18px 30px 10px;
     border-radius: 25px;
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    background-color: var(--primary-white-color);
 
     @media (min-width: 992px) {
         width: calc(50% - 15px);
@@ -444,4 +467,5 @@ button {
         left: calc(50% - 45px / 2);
     }
 }
+
 /* Footer */
