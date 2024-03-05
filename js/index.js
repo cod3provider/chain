@@ -18,5 +18,5 @@ function handleLinkClick(e) {
 
 
 footerLink.forEach(function (link) {
-  link.addEventListener('click', handleLinkClick);
+    link.addEventListener('click', handleLinkClick);
 });
