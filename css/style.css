@@ -448,7 +448,7 @@ button {
 
 .section-terms::before {
     content: '';
-    background-image: url(../images/services-bg.png);
+    background-image: url(../images/terms-bg-top.png);
     background-repeat: no-repeat;
     position: absolute;
     right: 0;
@@ -466,6 +466,26 @@ button {
     @media (min-width: 992px) {
         left: calc(50% - 45px / 2);
     }
+}
+
+.terms-text {
+    @media (max-width: 767px) {
+        max-width: 330px;
+    }
+    margin: 0 auto;
+    max-width: 445px;
+}
+
+.section-terms::after {
+    content: '';
+    background-image: url(../images/terms-bg-bottom.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: -300px;
+    width: 261px;
+    height: 368px;
+    z-index: -1;
 }
 
 /* Footer */
