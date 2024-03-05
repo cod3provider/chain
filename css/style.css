@@ -591,8 +591,10 @@ button {
     transition: var(--transition-bg-color);
 }
 
-.footer-form-input:hover {
-    background-color: #e7e7e7;
+@media (max-width: 768px) {
+    .footer-form-input:hover {
+        background-color: #e7e7e7;
+    }
 }
 
 @media (min-width: 768px) {
@@ -605,7 +607,7 @@ button {
         color: #fff;
     }
 
-   .footer-form-input::placeholder {
+    .footer-form-input::placeholder {
         color: rgba(204, 204, 204, 0.7);
     }
 }
