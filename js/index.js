@@ -20,3 +20,5 @@ function handleLinkClick(e) {
 footerLink.forEach(function (link) {
   link.addEventListener('click', handleLinkClick);
 });
+
+privacyBtn.addEventListener('click', handleScrollToTop)
