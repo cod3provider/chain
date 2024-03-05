@@ -1,5 +1,5 @@
 const footerLink = document.querySelectorAll('.js-footer-link');
-const privacyBtn = document.querySelector('.jsPrivacyBtn');
+const privacyBtn = document.querySelectorAll('.jsPrivacyBtn');
 
 const handleScrollToTop = e => {
     e.preventDefault();
@@ -26,3 +26,7 @@ function handleLinkClick(e) {
 footerLink.forEach(function (link) {
     link.addEventListener('click', handleLinkClick);
 });
+
+privacyBtn.forEach(function (link) {
+  link.addEventListener('click', handleScrollToTop);
+})
