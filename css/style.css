@@ -520,7 +520,7 @@ button {
     }
 
     @media (max-width: 576px) {
-     color: var(--primary-black-color)
+        color: var(--primary-black-color)
     }
 
     /*margin-bottom: 10px;*/
@@ -575,10 +575,7 @@ button {
 }
 
 .footer-form-input {
-    /*@media (max-width: 576px) {*/
-        width: 100%;
-    /*}*/
-
+    width: 100%;
     padding: 5px 30px;
     font-size: 15px;
     border: 1px solid #eee;
@@ -586,18 +583,32 @@ button {
     background-color: #fff;
     border-radius: 20px;
 
-    /*color: #fff;*/
     outline: transparent;
     height: 46px;
+
+}
+
+@media (min-width: 768px) {
+    .footer-form-input {
+        color: #fff;
+        background-color: transparent;
+    }
+
+   .footer-form-input::placeholder {
+        color: rgba(204, 204, 204, 0.7);
+    }
 }
 
 .footer-form-btn-wrapper {
-flex: 1;
+    flex: 1;
 }
 
 .footer-form-btn {
     /*width: fit-content;*/
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     width: 100%;
     /*margin: 0 auto;*/
     padding: 10px 50px;
@@ -612,6 +623,10 @@ flex: 1;
 .footer-form-btn:hover {
     background-color: #DADADAFF;
     color: var(--accent-color);
+
+    .footer-form-btn-icon {
+        fill: #4b8ef1;
+    }
 }
 
 .footer-list {
