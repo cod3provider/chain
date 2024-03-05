@@ -229,7 +229,6 @@ opacity: 0;
     display: none;
 }
 
-
 .header__list {}
 
 .header__item {
@@ -283,6 +282,7 @@ opacity: 0;
 
 @media screen and (min-width:768px) {
     .header__wrapper {
+
     }
 
     .menu {
