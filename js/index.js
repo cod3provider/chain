@@ -1,23 +1,23 @@
 const scrollLink = document.querySelectorAll('.js-scroll-link');
 const privacyBtn = document.querySelectorAll('.js-scroll-top-btn');
 
-const handleScrollToTop = e => {
+const handleScrollToTop = (e) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
-document.addEventListener("DOMContentLoaded", () => {
-  const burger = document.getElementById("burger");
-  const header = document.querySelector('header');
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('burger');
+    const header = document.querySelector('header');
 
-  burger.addEventListener("click", () => {
-    header.classList.toggle('open');
-  });
+    burger.addEventListener('click', () => {
+        header.classList.toggle('open');
+    });
 });
 
-const scrollToSection = sectionId => {
+const scrollToSection = (sectionId) => {
     document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
+};
 
 function handleLinkClick(e) {
     e.preventDefault();
@@ -30,5 +30,18 @@ scrollLink.forEach(function (link) {
 });
 
 privacyBtn.forEach(function (link) {
-  link.addEventListener('click', handleScrollToTop);
-})
+    link.addEventListener('click', handleScrollToTop);
+});
+
+window.onscroll = function () {
+    changeHeaderColor();
+};
+
+function changeHeaderColor() {
+    let header = document.getElementById('header');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        header.style.backgroundColor = '#fff'; 
+    } else {
+        header.style.backgroundColor = 'transparent'; 
+    }
+}
