@@ -1,3 +1,11 @@
+:root {
+    /* Colors */
+    --primary-black-color: #2A2A2A;
+    --primary-text-color: #AFAFAF;
+    --primary-white-color: #FFFFFF;
+
+}
+
 html {
     box-sizing: border-box;
 }
@@ -16,7 +24,21 @@ body {
     color: #afafaf;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: var(--primary-white-color);
+}
+
+/* Reset styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -35,10 +57,31 @@ a {
     text-decoration: none;
 }
 
+/* Common */
+
 .container {
     width: 100%;
     margin: 0 auto;
+    padding: 0 12px;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
 }
+
+/* Header */
 
 .header {
     display: flex;
@@ -84,7 +127,7 @@ a {
     position: absolute;
     width: 30px;
     height: 2px;
-    background-color: #2a2a2a;
+    background-color: var(--primary-black-color);
 }
 
 .burger-btn__row-second::before {
@@ -96,7 +139,7 @@ a {
     left: 0;
     top: -10px;
     transition: all 0.4s;
-    background-color: #2a2a2a;
+    background-color: var(--primary-black-color);
 }
 
 .burger-btn__row-second::after {
@@ -107,7 +150,7 @@ a {
     height: 2px;
     top: 10px;
     transition: all 0.4s;
-    background-color: #2a2a2a;
+    background-color: var(--primary-black-color);
 }
 
 .logo {
@@ -165,3 +208,48 @@ a {
         border-bottom: 1px solid #e7e7e7;
     }
 }
+/* Hero */
+
+.hero {
+    padding: 226px 0 30px;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.hero-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--primary-black-color);
+}
+
+.hero-btn-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    background-color: #4b8ef1;
+    color: #fff;
+}
+
+
