@@ -11,8 +11,6 @@ const open = document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('header').classList.toggle('open')
 })
 
-privacyBtn.addEventListener('click', handleScrollToTop);
-
 const scrollToSection = sectionId => {
     document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
