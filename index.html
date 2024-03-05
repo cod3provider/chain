@@ -9,6 +9,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@1,300;1,400;1,500;1,700&display=swap"
 		      rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="/images/icons/favicon.png">
 		<title>Chain App Dev</title>
 	</head>
 
@@ -93,6 +94,7 @@
 									other things, your name ("Personal Information").
 								</p>
 							</li>
+
 							<li class="privacy-list-item">
 								<h3 class="privacy-item-title">Log Data</h3>
 								<p class="text">
@@ -102,6 +104,7 @@
 									spent on those pages, and other statistics.
 								</p>
 							</li>
+
 							<li class="privacy-list-item">
 								<h3 class="privacy-item-title">Cookies</h3>
 								<p class="text">
@@ -109,6 +112,7 @@
 									Cookies are sent to your browser from a website and stored on your computer's hard drive
 								</p>
 							</li>
+
 							<li class="privacy-list-item">
 								<h3 class="privacy-item-title">Security</h3>
 								<p class="text">
@@ -154,72 +158,90 @@
 			</section>
 		</main>
 
-		<footer>
-			<p>
-				Contact Us Now To Discuss Your Project Requirements And Online Market Research For Accurate Information
-				Retrieval Within A Quick Response Time. We Will Get Back To You Within The Next 24 Hours. C. Montes Urales 424,
-				Lomas - Virreyes, Lomas De Chapultepec V Secc., Miguel Hidalgo, 11000 Miguel Hidalgo, CDMX, Mexico
-			</p>
+		<footer class="footer">
+			<div class="container footer-container">
+				<p class="footer-text">
+					Contact Us Now To Discuss Your Project Requirements And Online Market Research For Accurate Information
+					Retrieval Within A Quick Response Time. We Will Get Back To You Within The Next 24 Hours. C. Montes Urales
+					424,
+					Lomas - Virreyes, Lomas De Chapultepec V Secc., Miguel Hidalgo, 11000 Miguel Hidalgo, CDMX, Mexico
+				</p>
 
-			<form>
-				<label for="name">
-					<input
-						type="text"
-						name="name"
-						id="name"
-						placeholder="Name"
-						required
-					/>
-				</label>
+				<form class="footer-form">
+					<div class="footer-inputs-wrapper">
+						<label for="name">
+							<input
+								class="footer-form-input"
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Name"
+								required
+							/>
+						</label>
 
-				<label for="lastName">
-					<input
-						type="text"
-						name="lastName"
-						id="lastName"
-						placeholder="Last Name"
-						required
-					/>
-				</label>
+						<label for="lastName">
+							<input
+								class="footer-form-input"
+								type="text"
+								name="lastName"
+								id="lastName"
+								placeholder="Last Name"
+								required
+							/>
+						</label>
 
-				<label for="email">
-					<input
-						type="email"
-						name="email"
-						id="email"
-						placeholder="Email Address..."
-						required
-					/>
-				</label>
+						<label for="email">
+							<input
+								class="footer-form-input"
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Email Address..."
+								required
+							/>
+						</label>
 
-				<label for="message">
-					<input
-						type="text"
-						name="message"
-						id="message"
-						placeholder="Message"
-						required
-					/>
-				</label>
+						<label for="message">
+							<input
+								class="footer-form-input"
+								type="text"
+								name="message"
+								id="message"
+								placeholder="Message"
+								required
+							/>
+						</label>
+					</div>
 
-				<button type="submit">Send</button>
-			</form>
+					<div class="footer-form-btn-wrapper">
+						<button type="submit" class="footer-form-btn">
+							Send
+							<svg class="footer-form-btn-icon" width=12 height="12">
+								<use href="./images/icons/footer/arrow-right.svg#symbol-id"></use>
+							</svg>
+						</button>
+					</div>
+				</form>
 
-			<ul class="footer-links">
-				<li>
-					<a href="#">Contact Us</a>
-				</li>
-				<li>
-					<a href="#">Privacy policy</a>
-				</li>
-				<li>
-					<a href="#">T&C</a>
-				</li>
-			</ul>
+				<ul class="footer-list">
+					<li class="footer-item">
+						<a class="footer-link" href="#">Contact Us</a>
+					</li>
 
-			<p class="footer-copyright">
-				Copyright &#169; 2024 Chain App Dev Company. All Rights Reserved.
-			</p>
+					<li class="footer-item">
+						<a class="footer-link" href="#">Privacy policy</a>
+					</li>
+
+					<li class="footer-item">
+						<a class="footer-link" href="#">T&C</a>
+					</li>
+				</ul>
+
+				<p class="footer-copyright">
+					Copyright &#169; 2024 Chain App Dev Company. All Rights Reserved.
+				</p>
+			</div>
 		</footer>
 	</body>
 	<script src="js/index.js"></script>
