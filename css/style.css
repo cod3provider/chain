@@ -230,7 +230,7 @@ opacity: 0;
 
 .nav {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -259,6 +259,15 @@ opacity: 0;
 /*    letter-spacing: 1px;*/
 /*    color: #191a20;*/
 /*}*/
+
+.header__link {
+    text-transform: capitalize;
+        color: #191a20;
+}
+
+.header__link:hover {
+    color: var(--link-color);
+}
 
 @media screen and (max-width: 768px) {
     .header.open .menu {
@@ -318,22 +327,12 @@ opacity: 0;
     }
 
     .header__link {
-        font-weight: 500;
-        font-size: 15px;
         letter-spacing: 1px;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s;
         height: 40px;
         line-height: 40px;
         text-transform: capitalize;
         border: transparent;
         color: var(--primary-black-color);
-    }
-
-    .header__link:hover {
-        color: var(--link-color);
     }
 }
 

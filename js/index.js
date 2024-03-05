@@ -1,5 +1,5 @@
-const footerLink = document.querySelectorAll('.js-footer-link');
-const privacyBtn = document.querySelectorAll('.jsPrivacyBtn');
+const scrollLink = document.querySelectorAll('.js-scroll-link');
+const privacyBtn = document.querySelectorAll('.js-scroll-top-btn');
 
 const handleScrollToTop = e => {
     e.preventDefault();
@@ -25,7 +25,7 @@ function handleLinkClick(e) {
     scrollToSection(sectionId);
 }
 
-footerLink.forEach(function (link) {
+scrollLink.forEach(function (link) {
     link.addEventListener('click', handleLinkClick);
 });
 
