@@ -5,6 +5,9 @@
     --primary-white-color: #FFFFFF;
     --accent-color: #0d6efd;
     --link-color: #4b8ef1;
+
+    /* Transition */
+    --transition-bg-color: background-color 250ms linear;
 }
 
 html {
@@ -335,6 +338,11 @@ button {
     border-radius: 25px;
     background-color: #4b8ef1;
     color: #fff;
+    transition: var(--transition-bg-color);
+}
+
+.hero-link:hover {
+    background-color: #0a58ca;
 }
 
 .hero-image-wrapper {
@@ -565,33 +573,36 @@ button {
     gap: 8px;
     flex: 1;
 
-    /*width: calc(50% - 12px);*/
-
-
-    /*border: none;*/
-    /*background-color: transparent;*/
-    /*border-bottom: 1px solid #fff;*/
-    /*width: 100%;*/
+    @media (min-width: 768px) {
+        gap: 0;
+    }
 }
 
 .footer-form-input {
-    width: 100%;
     padding: 5px 30px;
+    width: 100%;
+    height: 46px;
     font-size: 15px;
     border: 1px solid #eee;
     color: #afafaf;
     background-color: #fff;
     border-radius: 20px;
-
     outline: transparent;
-    height: 46px;
+    transition: var(--transition-bg-color);
+}
 
+.footer-form-input:hover {
+    background-color: #e7e7e7;
 }
 
 @media (min-width: 768px) {
     .footer-form-input {
-        color: #fff;
+        padding: 2px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        border-radius: 0;
         background-color: transparent;
+        color: #fff;
     }
 
    .footer-form-input::placeholder {
@@ -615,9 +626,23 @@ button {
     border-radius: 25px;
     font-size: 15px;
     line-height: 1.7;
-    border: none;
+    border: 1px solid transparent;
     background-color: var(--primary-white-color);
-    transition: background-color 250ms linear, color 250ms linear;
+    transition: var(--transition-bg-color), color 250ms linear;
+
+    @media (min-width: 768px) {
+        border: 1px solid var(--primary-white-color);
+        color: var(--primary-white-color);
+        background-color: transparent;
+    }
+}
+
+.footer-form-btn-icon {
+    transition: fill 250ms linear;
+
+    @media (min-width: 768px) {
+        fill: var(--primary-white-color)
+    }
 }
 
 .footer-form-btn:hover {
@@ -642,6 +667,11 @@ button {
     @media (min-width: 768px) {
         margin-right: auto;
     }
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+        gap: 140px;
+    }
 }
 
 .footer-item {
@@ -657,4 +687,8 @@ button {
 
 .footer-link:hover {
     color: #0a58ca;
+}
+
+.footer-copyright {
+    color: var(--primary-white-color);
 }
