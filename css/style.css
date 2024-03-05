@@ -419,7 +419,15 @@ button {
     font-size: 20px;
     font-weight: 700;
     color: var(--primary-black-color);
-    /*transition: all .3s;*/
+}
+
+.privacy-link {
+    color: var(--primary-black-color);
+    transition: color 250ms linear;
+}
+
+.privacy-link:hover {
+    color: var(--link-color);
 }
 
 .btn-wrap {
@@ -531,7 +539,6 @@ button {
         color: var(--primary-black-color)
     }
 
-    /*margin-bottom: 10px;*/
     font-size: 30px;
     line-height: 1.5;
     font-weight: 700;
@@ -554,7 +561,6 @@ button {
 
 .footer-form {
     display: flex;
-    /*align-items: center;*/
     gap: 24px;
     width: 100%;
 
