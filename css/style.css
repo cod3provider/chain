@@ -3,7 +3,7 @@
     --primary-black-color: #2A2A2A;
     --primary-text-color: #AFAFAF;
     --primary-white-color: #FFFFFF;
-
+    --accent-color: #0d6efd;
 }
 
 html {
@@ -59,6 +59,10 @@ a {
 
 /* Common */
 
+.section {
+    margin: 15px 0;
+}
+
 .container {
     width: 100%;
     margin: 0 auto;
@@ -86,11 +90,35 @@ a {
 }
 
 .section-title {
+    @media (max-width: 320px) {
+        font-size: 26px;
+    }
+
+    position: relative;
     margin-bottom: 10px;
     font-size: 30px;
     font-weight: 700;
     text-transform: capitalize;
     color: #2a2a2a;
+}
+
+.section-title::after {
+    content: '––';
+    color: var(--accent-color);
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.text {
+    @media (max-width: 575.98px) {
+        font-size: 14px;
+    }
+
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 300;
+    color: var(--primary-text-color);
 }
 
 /* Header */
@@ -240,11 +268,23 @@ a {
 }
 
 .hero-title {
+    @media (max-width: 320px) {
+        font-size: 32px;
+    }
+
     font-weight: 700;
     font-size: 50px;
     line-height: 1.4;
     text-align: center;
     color: var(--primary-black-color);
+}
+
+.hero-subtitle {
+    font-weight: 400;
+
+    @media (min-width: 992px) {
+        color: var(--primary-black-color);
+    }
 }
 
 .hero-btn-list {
@@ -268,6 +308,12 @@ a {
 
 /* Privacy */
 
+.privacy-list-wrapper {
+    @media (min-width: 992px) {
+    width: 50%;
+    }
+}
+
 .privacy-list {
     display: flex;
     flex-wrap: wrap;
@@ -276,9 +322,21 @@ a {
 }
 
 .privacy-list-item {
-    padding: 10px 30px;
+    padding: 18px 30px 10px;
+    border-radius: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+
+    @media (min-width: 992px) {
+        width: calc(50% - 15px);
+    }
 }
 
+.privacy-item-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-black-color);
+    /*transition: all .3s;*/
+}
 
 /* Terms */
 
