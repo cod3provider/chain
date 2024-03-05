@@ -6,10 +6,14 @@ const handleScrollToTop = e => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-const open = document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("burger").addEventListener("click", () => { })
-    document.querySelector('header').classList.toggle('open')
-})
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const header = document.querySelector('header');
+
+  burger.addEventListener("click", () => {
+    header.classList.toggle('open');
+  });
+});
 
 const scrollToSection = sectionId => {
     document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
