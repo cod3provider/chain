@@ -283,8 +283,6 @@ opacity: 0;
 
 @media screen and (min-width:768px) {
     .header__wrapper {
-        /* display: flex; */
-
     }
 
     .menu {
