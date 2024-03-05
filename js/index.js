@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const scrollToSection = (sectionId) => {
-  document.querySelector(sectionId).scrollIntoView({behavior: 'smooth'});
+  document.querySelector(sectionId).scrollIntoView({
+    top: `sectionId + 20px`,
+    behavior: 'smooth'});
 };
 
 function handleLinkClick(e) {
